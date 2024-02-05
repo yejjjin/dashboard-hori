@@ -14,11 +14,42 @@ import { lighten } from "polished";
 import { Container } from "@chakra-ui/react";
 import Gnb from "./Gnb";
 import { PiHamburger } from "react-icons/pi";
+import gsap from "gsap";
 
 const Header = () => {
+  // 스크롤 이벤트 함수
+  const HandleScroll = () => {
+    const hd = document.querySelector("#header");
+    const scrollY = window.scrollY;
+    const navBar = document.querySelector(".nav-bar_wrapper");
+    const navBelt = document.querySelector(".nav-belt_wrapper");
+    const hdHeight = hd.offsetHeight; // 헤더 높이
+    const swiperHeight =
+      document.querySelector(".main-slide")?.offsetHeight || 0; // 슬라이드 높이
+
+    // 100px 이상 스크롤 되면 헤더에 배경색을 입힌다.
+    if (scrollY > swiperHeight - hdHeight) {
+      gsap.to(navBar, { backgroundColor: "#fff", duration: 0.5 });
+      gsap.to(navBelt, { backgroundColor: "#f6f7f8", duration: 0.5 });
+
+      gsap.to(navBelt.querySelectorAll("button"), {
+        color: "#000",
+        duration: 0.5,
+      });
+    } else {
+      // 100px 이하 스크롤 되면 헤더에 배경색을 없앤다.
+      gsap.to(navBar, { backgroundColor: "", duration: 0.5 });
+      gsap.to(navBelt, { backgroundColor: "", duration: 0.5 });
+    }
+  };
+
+  // 스크롤 이벤트 등록
+  window.addEventListener("scroll", HandleScroll);
+
   return (
     <Box
       as="header"
+      id="header"
       position={"fixed"}
       top={0}
       left={0}
@@ -29,6 +60,8 @@ const Header = () => {
     >
       {/* tab */}
       <Box
+        className="nav-belt_wrapper"
+        id="hd"
         display={["none", null, null, null, "block"]}
         h={"32px"}
         bg={"rgba(0,0,0,.6)"}
@@ -50,7 +83,7 @@ const Header = () => {
         </Container>
       </Box>
       {/* header */}
-      <Box borderColor={"#eee"}>
+      <Box className="nav-bar_wrapper" borderColor={"#eee"}>
         <Container>
           <Box
             display={["flex"]}
