@@ -14,10 +14,10 @@ const Gnb = () => {
         <Link to="/datatables">Data Tables</Link>
       </ListItem>
       <ListItem>
-        <Link to="/datatables">Profile</Link>
+        <Link to="/profile">Profile</Link>
       </ListItem>
       <ListItem>
-        <Link to="/datatables">Sign In</Link>
+        <Link to="/signin">Sign In</Link>
       </ListItem>
     </UnorderedList>
   );

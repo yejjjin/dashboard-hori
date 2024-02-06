@@ -12,7 +12,7 @@ const MainSlide = () => {
       <SwiperWrap
         pagination={true}
         modules={[Pagination]}
-        className="main-slide"
+        className="main-slide topCont"
       >
         <SwiperSlide>
           <Image

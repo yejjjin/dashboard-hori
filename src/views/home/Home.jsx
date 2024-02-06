@@ -1,12 +1,12 @@
 import { Container } from "@chakra-ui/react";
 import Title, { TitleH4 } from "../../components/common/Title";
 import { Section } from "../../components/layout/Container";
-import Layout from "../../components/layout/Layout";
+
 import MainSlide from "./components/MainSlide";
 
 const Home = () => {
   return (
-    <Layout title="home" showTitle="false">
+    <>
       <MainSlide />
       <Section isLightBackground={true}>
         <Container>
@@ -30,7 +30,7 @@ const Home = () => {
           voluptatum saepe aut.
         </Container>
       </Section>
-    </Layout>
+    </>
   );
 };
 

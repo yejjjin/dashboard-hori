@@ -1,10 +1,10 @@
-import Layout from "../../components/layout/Layout";
+import { Box } from "@chakra-ui/react";
 
 const Signin = () => {
   return (
-    <Layout title="signin">
-      <div>로그인 컨텐츠</div>
-    </Layout>
+    <>
+      <Box>로그인 컨텐츠</Box>
+    </>
   );
 };
 
