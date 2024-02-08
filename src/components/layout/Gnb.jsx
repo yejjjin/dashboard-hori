@@ -1,24 +1,34 @@
 import { ListItem, UnorderedList } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { Link as ReactRouterLink } from "react-router-dom";
+import { MdHome } from "react-icons/md";
+import { IoCartOutline } from "react-icons/io5";
+import { MdBarChart } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
+import { IoMdLogIn } from "react-icons/io";
 
 const Gnb = () => {
+  const navArr = [
+    { name: "Main Dashboard", path: "/", icon: <MdHome /> },
+    { name: "NFT Marketplace", path: "/", icon: <IoCartOutline /> },
+    { name: "Data Tables", path: "/", icon: <MdBarChart /> },
+    { name: "Profile", path: "/", icon: <FaUser /> },
+    { name: "Sign In", path: "/", icon: <IoMdLogIn /> },
+  ];
   return (
-    <UnorderedList display={{ sm: "none", lg: "flex" }} gap={"40px"}>
-      <ListItem>
-        <Link to="/">Main Dashboard</Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/marketplace">NFT Marketplace</Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/datatables">Data Tables</Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/profile">Profile</Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/signin">Sign In</Link>
-      </ListItem>
+    <UnorderedList>
+      {navArr.map((item, index) => (
+        <ListItem key={index}>
+          <Link
+            as={ReactRouterLink}
+            to={item.path}
+            display="flex"
+            position="relative"
+          >
+            {item.name} {item.icon}
+          </Link>
+        </ListItem>
+      ))}
     </UnorderedList>
   );
 };

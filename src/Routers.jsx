@@ -7,29 +7,29 @@ import Signin from "./views/signin/Signin";
 import { LayoutNone } from "./components/layout/Layout";
 import Layout from "./components/layout/Layout";
 
-const routeArr = [
-  {
-    path: "/",
-    element: <Home />,
-    background: "red",
-  },
-  {
-    path: "/marketplace",
-    element: <MarketPlace />,
-  },
-  {
-    path: "/datatables",
-    element: <DataTables />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
-  // {
-  //   path: "/signin",
-  //   element: <Signin />,
-  // },
-];
+// const routeArr = [
+//   {
+//     path: "/",
+//     element: <Home />,
+//     background: "red",
+//   },
+//   {
+//     path: "/marketplace",
+//     element: <MarketPlace />,
+//   },
+//   {
+//     path: "/datatables",
+//     element: <DataTables />,
+//   },
+//   {
+//     path: "/profile",
+//     element: <Profile />,
+//   },
+//   // {
+//   //   path: "/signin",
+//   //   element: <Signin />,
+//   // },
+// ];
 
 const Routers = () => {
   return (
