@@ -1,31 +1,31 @@
-@use 'sass:math';
-@use 'sass:map';
-@use 'sass:meta';
-@use 'vuetify/lib/styles/tools/functions' as *;
+@use "sass:math";
+@use "sass:map";
+@use "sass:meta";
+@use "vuetify/lib/styles/tools/functions" as *;
 
 // color
 $txtDefult: #202020;
 
 $primary: (
-    base: #438bf9,
-    Light: #5a5e71,
-    Light2: #e9f2ff,
-    Light2Lighten: lighten($primaryLight2, 2%),
-    Light3: #a6aac2,
-    Dark: #111b56,
-    lighten5: #e9f2ff,
-    lighten4: #c5d9ff,
-    lighten3: #a1c0ff,
-    lighten2: #7da7ff,
-    lighten1: #599eff,
-    darken1: #3d7ae6,
-    darken2: #2e5fbf,
-    darken3: #1f4499,
-    darken4: #101f73,
-    accent1: #ffffff,
-    accent2: #ffffff,
-    accent3: #ffffff,
-    accent4: #ffffff,
+  base: #438bf9,
+  Light: #5a5e71,
+  Light2: #e9f2ff,
+  Light2Lighten: lighten($primaryLight2, 2%),
+  Light3: #a6aac2,
+  Dark: #111b56,
+  lighten5: #e9f2ff,
+  lighten4: #c5d9ff,
+  lighten3: #a1c0ff,
+  lighten2: #7da7ff,
+  lighten1: #599eff,
+  darken1: #3d7ae6,
+  darken2: #2e5fbf,
+  darken3: #1f4499,
+  darken4: #101f73,
+  accent1: #ffffff,
+  accent2: #ffffff,
+  accent3: #ffffff,
+  accent4: #ffffff,
 );
 
 $secondary: #ff5722;
@@ -41,7 +41,7 @@ $gray-800: #424242;
 $gray-900: #212121;
 
 $fontSize: 16px;
-$fontFamily: 'Noto Sans KR', sans-serif;
+$fontFamily: "DM Sans", sans-serif;
 
 // 반응형 미디어 쿼리
 $breakpoint-sm: 576px;

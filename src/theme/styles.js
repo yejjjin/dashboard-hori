@@ -7,7 +7,7 @@ export const variables = {
 
 export const globalStyles = {
   colors: {
-    primay: "#422AFB",
+    primay: "#f4f7fe",
     pirmaryLight: lighten(0.1, "#422AFB"),
     secondary: "#83D9FB",
     secondaryLight: lighten(0.1, "#83D9FB"),
@@ -38,9 +38,9 @@ export const globalStyles = {
     global: (props) => ({
       body: {
         // overflowX: "hidden",
-        minW: "321px",
+        minW: "330px",
         bg: mode("white", "navy.900")(props),
-        fontFamily: '"Noto Sans KR", "sans-serif"',
+        fontFamily: '"DM Sans", "sans-serif"',
         letterSpacing: "-0.5px",
         fontSize: "16px",
         lineHeight: "1.5",

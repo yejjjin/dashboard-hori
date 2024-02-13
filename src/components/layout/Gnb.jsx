@@ -1,31 +1,63 @@
-import { ListItem, UnorderedList } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import { Link as ReactRouterLink } from "react-router-dom";
-import { MdHome } from "react-icons/md";
-import { IoCartOutline } from "react-icons/io5";
-import { MdBarChart } from "react-icons/md";
+import { useState } from "react";
+import { Link as ReactRouterLink, useLocation } from "react-router-dom";
+import { UnorderedList, ListItem, Link } from "@chakra-ui/react";
+import { FaCartShopping } from "react-icons/fa6";
+import { AiFillHome } from "react-icons/ai";
+import { IoStatsChart } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { IoMdLogIn } from "react-icons/io";
 
 const Gnb = () => {
   const navArr = [
-    { name: "Main Dashboard", path: "/", icon: <MdHome /> },
-    { name: "NFT Marketplace", path: "/", icon: <IoCartOutline /> },
-    { name: "Data Tables", path: "/", icon: <MdBarChart /> },
-    { name: "Profile", path: "/", icon: <FaUser /> },
-    { name: "Sign In", path: "/", icon: <IoMdLogIn /> },
+    { name: "Main Dashboard", path: "/", icon: <AiFillHome /> },
+    { name: "NFT Marketplace", path: "/marketplace", icon: <FaCartShopping /> },
+    { name: "Data Tables", path: "/datatables", icon: <IoStatsChart /> },
+    { name: "Profile", path: "/profile", icon: <FaUser /> },
+    { name: "Sign In", path: "/signin", icon: <IoMdLogIn /> },
   ];
+
+  const location = useLocation();
+
+  const [isSelected, setIsSelected] = useState(0);
+
   return (
-    <UnorderedList>
+    <UnorderedList
+      display={{ sm: "none", xl: "block" }}
+      py={6}
+      gap={"40px"}
+      fontSize={"16px"}
+    >
       {navArr.map((item, index) => (
         <ListItem key={index}>
           <Link
             as={ReactRouterLink}
             to={item.path}
-            display="flex"
             position="relative"
+            display="flex"
+            alignItems="center"
+            gap="17px"
+            p="9px 0 9px 20px"
+            sx={{
+              // 조건부 스타일 적용
+              color: location.pathname === item.path ? "primary" : "inherit", // 색상 변경
+              fontWeight: location.pathname === item.path ? "bold" : "inherit", // 글씨 굵기 변경
+              "&::after": {
+                content: '""',
+                display: location.pathname === item.path ? "block" : "none", // 선택 표시기
+                width: "4px",
+                bg: "primay",
+                position: "absolute",
+                top: "4px",
+                right: 0,
+                bottom: "4px",
+                borderRadius: "4px",
+              },
+              _hover: {
+                bg: "gray.100", // 마우스 호버 시의 배경색 변경
+              },
+            }}
           >
-            {item.name} {item.icon}
+            {item.icon} {item.name}
           </Link>
         </ListItem>
       ))}
