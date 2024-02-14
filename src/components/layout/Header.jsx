@@ -1,13 +1,4 @@
-import React, { useEffect, useState } from "react";
-import {
-  Box,
-  ButtonGroup,
-  Button,
-  Heading,
-  IconButton,
-  Container,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Heading, Link } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import Gnb from "./Gnb";
@@ -16,7 +7,7 @@ const Header = () => {
   return (
     <>
       <Box
-        display={{ sm: "none", xl: "block" }}
+        display={{ base: "none", xl: "block" }}
         as="header"
         id="header"
         position={"fixed"}

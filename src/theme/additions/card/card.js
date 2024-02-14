@@ -6,12 +6,20 @@ const Card = {
     flexDirection: "column",
     width: "100%",
     position: "relative",
-    borderRadius: "20px",
+    container: {
+      borderRadius: "20px",
+    },
     minWidth: "0px",
     wordWrap: "break-word",
     bg: mode("#ffffff", "navy.800")(props),
     backgroundClip: "border-box",
   }),
+  variants: {
+    primary: (props) => ({
+      boxShadow: "none",
+      bg: mode("white", "gray.700")(props),
+    }),
+  },
 };
 
 export const CardComponent = {

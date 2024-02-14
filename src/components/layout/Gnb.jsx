@@ -22,7 +22,7 @@ const Gnb = () => {
 
   return (
     <UnorderedList
-      display={{ sm: "none", xl: "block" }}
+      display={{ base: "none", xl: "block" }}
       py={6}
       gap={"40px"}
       fontSize={"16px"}
@@ -45,7 +45,7 @@ const Gnb = () => {
                 content: '""',
                 display: location.pathname === item.path ? "block" : "none", // 선택 표시기
                 width: "4px",
-                bg: "primay",
+                bg: "primary",
                 position: "absolute",
                 top: "4px",
                 right: 0,
