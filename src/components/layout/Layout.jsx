@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import Footer from "./Footer";
 import Header from "./Header";
 import { Box, Stack } from "@chakra-ui/react";
 import History from "./History";
@@ -29,11 +28,11 @@ const Layout = () => {
           right={"12px"}
           py={2}
           px={{ base: 2, xl: 4 }}
-          // bg={'rgba(255, 255, 255, 0.1)'}
-          bg={"rgba(255, 0, 0, 0.1)"}
+          bg={"rgba(244, 247, 254, 0.2)"}
           backdropFilter={"blur(10px)"}
           borderRadius={"0.75rem"}
           transition={"all 0.2s"}
+          zIndex={1}
         >
           <Box>
             <History />

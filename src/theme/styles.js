@@ -15,6 +15,7 @@ export const globalStyles = {
     tertiaryLight: lighten(0.1, "#22C55F"),
 
     bgDefault: "#F5F7FF",
+    txtsecond: "#a3aed0",
 
     lineDefault: "#E5E7EB",
 
