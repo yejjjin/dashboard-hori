@@ -14,8 +14,9 @@ const Layout = () => {
         id="main"
         flexGrow={1}
         pl={{ base: "12px", xl: 312 }}
-        pr={{ base: "12px", xl: "12px" }}
+        pr={{ base: "12px", xl: "30px" }}
         pt={{ base: 200, md: 140 }}
+        pb={{ base: "20px", md: "30px" }}
         transition={"all 0.2s"}
       >
         <Stack

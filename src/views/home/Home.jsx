@@ -8,9 +8,12 @@ import { MdFileCopy, MdOutlineAttachMoney } from "react-icons/md";
 import { LiaFlagUsaSolid } from "react-icons/lia";
 import TotalSpent from "./components/TotalSpent";
 import Weekly from "./components/Weekly";
-import CheckTable from "./components/CheckTable";
 import DailyTraffic from "./components/DailyTraffic";
 import PieCard from "./components/PieCard";
+import MiniCalendar from "./components/MiniCalendar";
+import Task from "./components/Task";
+import ComplexTable from "./components/ComplexTable";
+import CheckTables from "./components/CheckTables";
 
 const Home = () => {
   return (
@@ -93,17 +96,17 @@ const Home = () => {
           <Weekly />
         </SimpleGrid>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={"100%"}>
-          <CheckTable />
+          <CheckTables />
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={"100%"}>
             <DailyTraffic />
             <PieCard />
           </SimpleGrid>
         </SimpleGrid>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={"100%"}>
-          <Box bg="tomato" height="80px"></Box>
+          <ComplexTable />
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={"100%"}>
-            <Box bg="tomato" height="80px"></Box>
-            <Box bg="tomato" height="80px"></Box>
+            <Task />
+            <MiniCalendar />
           </SimpleGrid>
         </SimpleGrid>
       </VStack>
