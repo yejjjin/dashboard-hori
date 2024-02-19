@@ -11,7 +11,6 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { useSortBy, useTable } from "react-table";
 // import { tableDataCheck } from "../../../variables/tables";
 const CheckTables = () => {

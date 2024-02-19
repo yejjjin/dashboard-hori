@@ -1,5 +1,3 @@
-import { IoMdCheckmarkCircle } from "react-icons/io";
-
 export const tableDataCheck = [
   {
     checked: false,
@@ -41,26 +39,26 @@ export const tableDataCheck = [
 export const tableComplexData = [
   {
     NAME: "Horizon UI PRO",
-    STATUS: <IoMdCheckmarkCircle />,
+    STATUS: "Approved",
     DATE: "18 Apr 2022",
-    PROGRESS: "17.5%",
+    PROGRESS: 75.5,
   },
   {
     NAME: "Horizon UI FREE",
-    STATUS: "",
+    STATUS: "Disable",
     DATE: "18 Apr 2022",
-    PROGRESS: "10.8%",
+    PROGRESS: 25.5,
   },
   {
     NAME: "Marketplace",
-    STATUS: "",
+    STATUS: "Error",
     DATE: "20 May 2021",
-    PROGRESS: "21.3%",
+    PROGRESS: 90,
   },
   {
     NAME: "Weekly Updates",
-    STATUS: "",
+    STATUS: "Approved",
     DATE: "12 Jul 2021",
-    PROGRESS: "31.5%",
+    PROGRESS: 50.5,
   },
 ];
