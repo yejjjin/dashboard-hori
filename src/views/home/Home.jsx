@@ -63,7 +63,7 @@ const Home = () => {
           />
           <MiniSt
             name="New Tasks"
-            value="145"
+            value="154"
             startContent={
               <IconBox
                 w={"56px"}
