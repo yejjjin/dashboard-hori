@@ -9,6 +9,7 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
+import { TopCreatorsData } from "../../../variables/tables";
 
 const TableTopCreators = () => {
   return (
@@ -32,30 +33,22 @@ const TableTopCreators = () => {
           See all
         </Button>
       </Flex>
-      <Table variant="simple">
+      <Table variant="baseStyle">
         <Thead>
           <Tr>
-            <Th>To convert</Th>
-            <Th>into</Th>
-            <Th isNumeric>multiply by</Th>
+            <Th>NAME</Th>
+            <Th>ARTWORKS</Th>
+            <Th isNumeric>RATING</Th>
           </Tr>
         </Thead>
         <Tbody>
-          <Tr>
-            <Td>inches</Td>
-            <Td>millimetres (mm)</Td>
-            <Td isNumeric>25.4</Td>
-          </Tr>
-          <Tr>
-            <Td>feet</Td>
-            <Td>centimetres (cm)</Td>
-            <Td isNumeric>30.48</Td>
-          </Tr>
-          <Tr>
-            <Td>yards</Td>
-            <Td>metres (m)</Td>
-            <Td isNumeric>0.91444</Td>
-          </Tr>
+          {TopCreatorsData.map((row, index) => (
+            <Tr key={index}>
+              <Td>{row.NAME}</Td>
+              <Td>{row.ARTWORS}</Td>
+              <Td isNumeric>{row.RATING}</Td>
+            </Tr>
+          ))}
         </Tbody>
       </Table>
     </Flex>

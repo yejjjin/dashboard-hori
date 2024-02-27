@@ -62,3 +62,41 @@ export const tableComplexData = [
     PROGRESS: 50.5,
   },
 ];
+
+export const TopCreatorsData = [
+  {
+    NAME: "@maddison_c21",
+    ARTWORS: "9821",
+    RATING: 97,
+  },
+  {
+    NAME: "@karl.will02",
+    ARTWORS: "7032",
+    RATING: 87,
+  },
+  {
+    NAME: "@andreea.1z",
+    ARTWORS: "5204",
+    RATING: 82,
+  },
+  {
+    NAME: "@abraham47.y",
+    ARTWORS: "4309",
+    RATING: 68,
+  },
+  {
+    NAME: "@simmmple.web",
+    ARTWORS: "3871",
+    RATING: 55,
+  },
+  {
+    NAME: "@horizon.ui",
+    ARTWORS: "3152",
+    RATING: 46,
+  },
+  {
+    NAME: "@venus.sys",
+    ARTWORS: "2907",
+    RATING: 38,
+  },
+];

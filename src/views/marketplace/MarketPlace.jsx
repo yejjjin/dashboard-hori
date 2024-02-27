@@ -1,13 +1,11 @@
 import {
-  Box,
+  Button,
   Card,
   Flex,
   Grid,
-  GridItem,
   Link,
   SimpleGrid,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 import Banner from "./components/Banner";
 import NFT from "../../components/card/NFT";
@@ -23,6 +21,7 @@ import Avatar2 from "../../assets/images/avatars/avatar2.png";
 import Avatar3 from "../../assets/images/avatars/avatar3.png";
 import Avatar4 from "../../assets/images/avatars/avatar4.png";
 import TableTopCreators from "./components/TableTopCreators";
+import HistoryItem from "./components/HistoryItem";
 
 const MarketPlace = () => {
   return (
@@ -191,11 +190,71 @@ const MarketPlace = () => {
             </SimpleGrid>
           </Flex>
         </Flex>
-        <Flex w="100%" flexDir={"column"} gap={10}>
+        <Flex w="100%" flexDir={"column"} margin={"20px"}>
           <Card padding={"20px 0"} mb={"20px"}>
             <TableTopCreators />
           </Card>
-          <Card></Card>
+          <Card>
+            <Flex
+              p={"18px 22px"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+            >
+              <Text fontSize={"20px"} fontWeight={600} color={"#1B254B"}>
+                History
+              </Text>
+              <Button
+                fontSize="16px"
+                fontWeight={500}
+                color={"primary"}
+                borderRadius={"full"}
+              >
+                See all
+              </Button>
+            </Flex>
+            <HistoryItem
+              name="Colorful Heaven"
+              author="By Mark Benjamin"
+              date="30s ago"
+              image={NFT5}
+              price="0.91 ETH"
+            />
+            <HistoryItem
+              name="Abstract Colors"
+              author="By Esthera Jackson"
+              date="58s ago"
+              image={NFT1}
+              price="0.91 ETH"
+            />
+            <HistoryItem
+              name="ETH AI Brain"
+              author="By Nick Wilson"
+              date="1m ago"
+              image={NFT2}
+              price="0.91 ETH"
+            />
+            <HistoryItem
+              name="Swipe Circles"
+              author="By Peter Will"
+              date="1m ago"
+              image={NFT4}
+              price="0.91 ETH"
+            />
+            <HistoryItem
+              name="Mesh Gradients "
+              author="By Will Smith"
+              date="2m ago"
+              image={NFT3}
+              price="0.91 ETH"
+            />
+            <HistoryItem
+              name="3D Cubes Art"
+              author="By Manny Gates"
+              date="3m ago"
+              image={NFT6}
+              price="0.91 ETH"
+            />
+          </Card>
         </Flex>
       </Grid>
     </>
