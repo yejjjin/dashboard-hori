@@ -14,6 +14,7 @@
     "apexcharts": "^3.45.2",
     "faker": "^6.6.6",
     "framer-motion": "^11.0.3",
+    "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "node-sass": "^9.0.0",
     "polished": "^4.2.2",
@@ -29,11 +30,14 @@
     "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://yejjjin.click/dashboard-hori",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
