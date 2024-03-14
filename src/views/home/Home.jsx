@@ -25,11 +25,11 @@ const Home = () => {
     document.body.classList.add("intro");
     // 2. 컴포넌트가 언미운트(소멸) 될 때 배경색 원래대로 변경
     return () => {
-      document.body.style.backgroundColor = "";
+      document.body.style.backgroundColor = color;
       document.body.id = "";
       document.body.classList.remove("intro");
     };
-  }, []);
+  }, [color]);
 
   // 3. 업데이트 : 버튼 클릭시 배경색 변경
   const [color, setColor] = useState("lightgray");
