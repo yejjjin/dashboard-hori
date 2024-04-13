@@ -3,6 +3,7 @@ export const checkboxStyles = {
     Checkbox: {
       baseStyle: {
         control: {
+          borderRadius: "none",
           marginInlineEnd: "10px",
         },
         icon: {

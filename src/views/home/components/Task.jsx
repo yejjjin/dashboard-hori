@@ -1,37 +1,35 @@
 import { DragHandleIcon } from "@chakra-ui/icons";
-import { Card, Checkbox, Stack, Text } from "@chakra-ui/react";
+import { Card, Checkbox, Stack, Text, Flex } from "@chakra-ui/react";
 
 const Task = () => {
   return (
     <Card p={"20px"}>
-      <Text>Tasks</Text>
-      <Stack p={"0 11px"}>
-        <Checkbox mb={"20px"} fontSize={"16px"} fontWeight={700}>
-          Landing Page Design{" "}
-          <DragHandleIcon
-            ml={"25px"}
-            color={"txtsecond"}
-            w={"20px"}
-            h={"20px"}
-            display={"inline-block"}
-          />
-        </Checkbox>
-        <Checkbox defaultChecked mb={"20px"}>
-          Dashboard Builder
-          <DragHandleIcon ml={"25px"} color={"txtsecond"} />
-        </Checkbox>
-        <Checkbox defaultChecked mb={"20px"}>
-          Mobile App Design
-          <DragHandleIcon ml={"25px"} color={"txtsecond"} />
-        </Checkbox>
-        <Checkbox mb={"20px"}>
-          Illustrations
-          <DragHandleIcon ml={"25px"} color={"txtsecond"} />
-        </Checkbox>
-        <Checkbox defaultChecked mb={"20px"}>
-          Promotional LP
-          <DragHandleIcon ml={"25px"} color={"txtsecond"} />
-        </Checkbox>
+      <Text mb={2} fontSize={"18px"} fontWeight={700} marginBottom={"30px"}>
+        Tasks
+      </Text>
+      <Stack spacing={4}>
+        <Flex alignItems="center" justifyContent="space-between">
+          <Checkbox fontSize={"16px"} display={"flex"}>
+            Landing Page Design
+          </Checkbox>
+          <DragHandleIcon color={"txtsecond"} />
+        </Flex>
+        <Flex alignItems="center" justifyContent="space-between">
+          <Checkbox defaultChecked>Dashboard Builder</Checkbox>
+          <DragHandleIcon color={"txtsecond"} />
+        </Flex>
+        <Flex alignItems="center" justifyContent="space-between">
+          <Checkbox defaultChecked>Mobile App Design</Checkbox>
+          <DragHandleIcon color={"txtsecond"} />
+        </Flex>
+        <Flex alignItems="center" justifyContent="space-between">
+          <Checkbox>Illustrations</Checkbox>
+          <DragHandleIcon color={"txtsecond"} />
+        </Flex>
+        <Flex alignItems="center" justifyContent="space-between">
+          <Checkbox defaultChecked>Promotional LP</Checkbox>
+          <DragHandleIcon color={"txtsecond"} />
+        </Flex>
       </Stack>
     </Card>
   );

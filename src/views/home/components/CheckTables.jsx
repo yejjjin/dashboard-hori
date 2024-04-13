@@ -95,7 +95,9 @@ const CheckTables = () => {
     useTable({ columns, data }, useSortBy);
   return (
     <Card>
-      <CardHeader>Check Table</CardHeader>
+      <CardHeader fontSize={"22px"} fontWeight={700}>
+        Check Table
+      </CardHeader>
       <TableContainer style={{ overflowX: "hidden" }}>
         <Table variant="baseStyle" {...getTableProps()}>
           <Thead>
